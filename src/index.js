@@ -13,12 +13,10 @@ const filterPosts = posts => posts.filter(x => x.tim !== undefined)
   .map(x => `http://i.4cdn.org/h/${x.tim}${x.ext}`)
 
 const saveAll = async (posts, directory) => {
-  let dirPath = directory === undefined ? __dirname : join(__dirname, directory)
-
-  await fs.ensureDir(dirPath)
+  await fs.ensureDir(directory)
   for (let post of posts) {
     let { base } = parse(post)
-    let out = fs.createWriteStream(join(dirPath, base))
+    let out = fs.createWriteStream(join(directory, base))
     get(post).pipe(out)
   }
 }
