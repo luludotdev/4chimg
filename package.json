@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "description": "Download every image in a 4chan thread at once.",
   "main": "src/index.js",
-  "bin": {
-    "4chimg": "4chimg.js"
-  },
+  "bin": "bin/4chimg.js",
   "scripts": {
     "test": "eslint --color src/"
   },
