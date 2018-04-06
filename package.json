@@ -1,0 +1,29 @@
+{
+  "name": "4chimg",
+  "version": "0.1.0",
+  "description": "Download every image in a 4chan thread at once.",
+  "main": "src/index.js",
+  "bin": {
+    "4chimg": "4chimg.js"
+  },
+  "scripts": {
+    "test": "eslint --color src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolPants/4chimg.git"
+  },
+  "keywords": [
+    "4chan",
+    "thread",
+    "image",
+    "download",
+    "all"
+  ],
+  "author": "Jack Baron <jackmbaron@gmail.com> (https://www.jackbaron.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lolPants/4chimg/issues"
+  },
+  "homepage": "https://github.com/lolPants/4chimg#readme"
+}
