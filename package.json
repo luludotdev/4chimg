@@ -1,6 +1,6 @@
 {
   "name": "4chimg",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Download every image in a 4chan thread at once.",
   "main": "src/index.js",
   "bin": "bin/4chimg.js",
@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/lolPants/4chimg#readme",
   "devDependencies": {
-    "cli-spinner": "^0.2.8",
     "eslint": "^4.19.1"
   },
   "dependencies": {
+    "cli-spinner": "^0.2.8",
     "commander": "^2.15.1",
     "fs-extra": "^5.0.0",
     "snekfetch": "^3.6.4"
