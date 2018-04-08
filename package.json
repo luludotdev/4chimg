@@ -1,6 +1,6 @@
 {
   "name": "4chimg",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Download every image in a 4chan thread at once.",
   "main": "src/index.js",
   "bin": "bin/4chimg.js",
