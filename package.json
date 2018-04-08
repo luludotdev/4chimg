@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/lolPants/4chimg#readme",
   "devDependencies": {
+    "cli-spinner": "^0.2.8",
     "eslint": "^4.19.1"
   },
   "dependencies": {
