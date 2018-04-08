@@ -8,7 +8,7 @@ const { downloadThread } = require('../src/index')
 
 program
   .version(require('../package.json').version)
-  .arguments('<input>')
+  .arguments('<thread url>')
   .option('-D, --directory <dir>', 'Download Directory (uses current if not specified)')
   .parse(process.argv)
 

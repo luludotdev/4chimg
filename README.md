@@ -10,7 +10,7 @@ The package is intended for use as a CLI tool. Install with NPM using `npm i -g 
 
 ## 🔧 Usage
 ```
-4chimg [options] <input>
+4chimg [options] <thread url>
 
 Options:
   -V, --version          output the version number
