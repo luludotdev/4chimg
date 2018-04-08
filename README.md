@@ -1,4 +1,4 @@
-# 🎲 4chIMG
+# 📥 4chIMG
 [![NPM version](https://img.shields.io/npm/v/4chimg.svg?maxAge=3600)](https://www.npmjs.com/package/4chimg)
 [![NPM downloads](https://img.shields.io/npm/dt/4chimg.svg?maxAge=3600)](https://www.npmjs.com/package/4chimg)
 [![Dependencies](https://img.shields.io/david/lolpants/4chimg.svg?maxAge=3600)](https://david-dm.org/lolpants/4chimg)
