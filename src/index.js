@@ -12,15 +12,23 @@ const fetchThreadJSON = async url => {
 const filterPosts = (posts, board) => posts.filter(x => x.tim !== undefined)
   .map(x => `http://i.4cdn.org/${board}/${x.tim}${x.ext}`)
 
+const saveFile = (post, directory) => new Promise(resolve => {
+  let { base } = parse(post)
+  let out = fs.createWriteStream(join(directory, base))
+  get(post).pipe(out).on('close', () => { resolve() })
+})
+
 const saveAll = async (posts, directory) => {
   await fs.ensureDir(directory)
-  for (let post of posts) {
-    let { base } = parse(post)
-    let out = fs.createWriteStream(join(directory, base))
-    get(post).pipe(out)
-  }
+  return Promise.all(posts.map(post => saveFile(post, directory)))
 }
 
+/**
+ * Download all images in a 4chan thread
+ * @param {string} url Thread URL
+ * @param {string} directory Directory to save into
+ * @returns {Promise.<void>}
+ */
 const downloadThread = (url, directory) => fetchThreadJSON(url)
   .then(x => filterPosts(x.posts, x.board))
   .then(posts => saveAll(posts, directory))
