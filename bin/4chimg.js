@@ -25,7 +25,11 @@ const main = async p => {
     spinner.setSpinnerString(process.platform === 'win32' ? 0 : 18)
     spinner.start()
 
-    await downloadThread(url, directory)
+    let i = 0
+    await downloadThread(url, directory, max => {
+      i++
+      spinner.setSpinnerTitle(`%s downloading... (${i} of ${max})`)
+    })
 
     spinner.stop(true)
     console.log('finished downloading.')
