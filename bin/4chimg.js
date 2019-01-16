@@ -18,10 +18,10 @@ program
 const main = async p => {
   if (program.args.length === 0) program.help()
   try {
-    let directory = p.directory || '.'
-    let [url] = p.args
+    const directory = p.directory || '.'
+    const [url] = p.args
 
-    let spinner = new Spinner('%s downloading...')
+    const spinner = new Spinner('%s downloading...')
     spinner.setSpinnerString(process.platform === 'win32' ? 0 : 18)
     spinner.start()
 
